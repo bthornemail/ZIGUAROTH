@@ -1,0 +1,11 @@
+"YHWH Elohim":
+  name: "YHWH Elohim"
+  literal: "יהוה אלהים"
+  is: "a double divine name: the Name and Elohim, written side by side with no joining word"
+  from: "the Westminster Leningrad Codex (public domain), via Sefaria"
+  first: "Genesis 2:4, where the second creation account begins"
+  occurs: "20 times in 19 verses, all in Genesis 2:4 to 3:23 among the chapters taken in: Genesis 2:4, 2:5, 2:7, 2:8, 2:9, 2:15, 2:16, 2:18, 2:19, 2:21, 2:22, 3:1, 3:8 (twice), 3:9, 3:13, 3:14, 3:21, 3:22, 3:23"
+  witnesses: "Leningrad only; the surviving Aleppo Codex begins at Deuteronomy 28:17, so it has no Genesis"
+  related: "the first word is the Name, יהוה, whose renderings I-229 checks (omi-axioms js/catalog/I-229.ts)"
+  insertion: "placed by its consonants, one code point per letter: י _CODE/U/05/D/9 ה _CODE/U/05/D/4 ו _CODE/U/05/D/5 ה _CODE/U/05/D/4 ; א _CODE/U/05/D/0 ל _CODE/U/05/D/C ה _CODE/U/05/D/4 י _CODE/U/05/D/9 ם _CODE/U/05/D/D"
+  finals: "the last letter is final mem ם (U+05DD), kept as written; reading it as mem מ (U+05DE) is a fold, not the literal"

@@ -1,0 +1,55 @@
+# Sources
+
+Every source this codex draws on, what it allows, and how the codex may use it. A source
+enters this list before anything from it enters the codex. Draft, 2026-10-25.
+
+## Texts
+
+| Source | Where it came from | Terms | How the codex may use it |
+|---|---|---|---|
+| Westminster Leningrad Codex | Sefaria API, version "Tanach with Ta'amei Hamikra", from tanach.us (`Tanach.xml`) | Public domain | Quote freely; credit the edition and Sefaria |
+| Miqra according to the Masorah (MAM), based on the Aleppo Codex | Sefaria API, from he.wikisource (User:Dovi) | CC BY-SA | Quote with credit; anything adapted from it must be shared under CC BY-SA or a compatible licence |
+| Codex Sinaiticus transcription | codexsinaiticus.org (`handler/transcription.ashx`) | "only for non-commercial personal and educational use"; other uses need written permission from the British Library, Leipzig University Library, St Catherine's Monastery and the National Library of Russia | **Never the text.** Only verse references and the fact that a reading differs |
+
+Credit for MAM, when the codex quotes it:
+
+> Miqra according to the Masorah (MAM), he.wikisource, via Sefaria. CC BY-SA.
+
+## Images
+
+From Wikimedia Commons, used in the commons presentation (`unboxed/docs/commons`):
+
+| File | Author | Licence |
+|---|---|---|
+| Karnaugh_map_torus.svg | Cmglee | CC BY-SA 4.0 |
+| K-map_6,8,9,10,11,12,13,14.svg | Cburnett | CC BY-SA 3.0 |
+| Four_bit_adder_with_carry_lookahead.svg | Trex4321 | CC0 |
+| Difference_DNA_RNA-EN.svg | Sponk | CC BY-SA 3.0 |
+| Smith_chart_gen.svg | Wdwd | CC BY-SA 3.0 |
+| Genaille-Lucas_rulers_full.svg | Worrydream | Public domain |
+
+Each at `https://commons.wikimedia.org/wiki/File:<file>`.
+
+## The author's own work
+
+| Work | Where | Licence |
+|---|---|---|
+| omi-axioms (the I-records) | github.com/bthornemail/omi-axioms | **None stated** |
+| boxedPINE | github.com/bthornemail/boxedPINE | **None stated** |
+| theory-of-everything, in-the-beginning, rfcXXXX | github.com/bthornemail | **None stated** |
+| axiomatic-sovereignty, setco | /home/main/omi | **None stated** (no licence file) |
+
+A public repository with no licence lets people read it, but it gives nobody permission
+to copy, change or share it. If the intent is to give this work away, each repository
+needs a licence file. Choosing one is the author's decision (CC0 and CC BY-SA were the two
+candidates discussed). Anything that adapts MAM text has to stay CC BY-SA compatible.
+
+## Who wrote what
+
+The three roles in this work:
+
+- **Brian James Thorne**, the author: the questions, the abstraction, the readings. His
+  words are quoted with dates in each record's origin (`omi-axioms/js/catalog/ORIGINS.json`).
+- **DeepSeek**: words and predictions, where a record says so (for example the
+  `src/terms.mjs --audit` predictions).
+- **Claude** (Anthropic): code and checks, credited in commit trailers.
