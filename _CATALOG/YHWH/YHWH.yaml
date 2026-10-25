@@ -3,6 +3,6 @@
   literal: "יהוה"
   is: "the Name, the four letters yod he vav he"
   from: "the Westminster Leningrad Codex (public domain) and Miqra according to the Masorah, based on the Aleppo Codex (CC BY-SA), via Sefaria"
-  witnesses: "Deuteronomy 29:1 in Sefaria's Hebrew verse numbering: Leningrad writes יְהוָה, MAM writes יְהֹוָה. The consonants are one literal; MAM's pointing has one mark more, holam (U+05B9). Both codices write the Name 18 times in Deuteronomy 29"
+  witnesses: "Deuteronomy 29:1 in Sefaria's Hebrew verse numbering (29:2 in most English Bibles): Leningrad writes יְהוָה, MAM writes יְהֹוָה. The consonants are one literal; MAM's pointing has one mark more, holam (U+05B9). Both codices write the Name 18 times in Deuteronomy 29"
   related: "I-229 checks its renderings: ADONAI and THE LORD replace the four letters; YAHWEH keeps them; YAH is their head; JAH and JEHOVAH keep them only under the fold J to Y, V to W (omi-axioms js/catalog/I-229.ts). It is the first word of YHWH Elohim"
   insertion: "placed by its consonants, one code point per letter: י _CODE/U/05/D/9 ה _CODE/U/05/D/4 ו _CODE/U/05/D/5 ה _CODE/U/05/D/4"
