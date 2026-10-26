@@ -1,15 +1,16 @@
-ZIGUA-ROTH: private/codex-witness/leningrad/Genesis.5.json; private/codex-witness/swete/01.Genesis.txt
+ZIGUA-ROTH: private/codex-witness/leningrad/Genesis.5.json; private/codex-witness/swete/01.Genesis.txt; private/codex-witness/alexandrinus/raw/v1.pdf
 MIME-Version: 1.0
 Content-Type: application/yaml; charset=utf-8
 Content-Transfer-Encoding: binary
-Content-Length: 8346
-Content-Description: The years from Adam to Abram in the Masoretic and Septuagint witnesses, computed from their number words; CC BY-SA 4.0 (Open Greek and Latin First1KGreek, lxx-swete)
+Content-Length: 8794
+Content-Description: The years from Adam to Abram in the Masoretic and Septuagint witnesses, computed from their number words, checked against Codex Alexandrinus; CC BY-SA 4.0 (Open Greek and Latin First1KGreek, lxx-swete)
 
 "ANNOMUNDI":
   title: "The years from Adam to Abram, in two witnesses"
   witnesses: "MT: the Westminster Leningrad Codex (public domain), via Sefaria. LXX: Swete, The Old Testament in Greek According to the Septuagint (1887-94, public domain); for Genesis 1-46 his text is Codex Alexandrinus, since Codex Vaticanus lacks it; digital text from Open Greek and Latin First1KGreek via github.com/nathans/lxx-swete, CC BY-SA 4.0, so this article is CC BY-SA 4.0"
   method: "each age is read from the number words of its verse by a parser; no value is typed in. AM is the running sum of the fathers' ages at the birth of the son who continues the line, then Noah's age at the Flood, then two years to Shem's son (Genesis 11:10)"
   folds: "declared corrections of digitization errors in the Greek file, not of the witness: τριόκοντα read as τριάκοντα (11:13, 11:18); ὄη read as ἔτη (11:18); ἐγέντὸν read as ἐγέννησεν τὸν (11:22). τέσσερα (11:16) is the Septuagint's own spelling, not an error. The file's Genesis 5:32 is empty and is not used"
+  manuscript: "checked 2026-10-25 against the manuscript itself, in Kenyon 1915 reduced photographic facsimile of Royal MS 1 D V (Internet Archive TheCodexAlexandrinusV.1, public domain mark), page 17, read by eye: Jared 162 (5:18), Methuselah 187, ΟΓΔΟΗΚΟΝΤΑ, not 167 (5:25), Lamech 565 after Noah (5:30), and 5:32 present: Noah was 500 and begot three sons. The empty 5:32 of the digital file is a digitization gap, not the manuscript"
   line:
     - father: "Adam"
       MT: "130 years, Genesis 5:3: ויחי אדם שלשים ומאת שנה ויולד"
