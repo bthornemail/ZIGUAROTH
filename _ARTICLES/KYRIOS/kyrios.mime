@@ -1,0 +1,50 @@
+ZIGUA-ROTH: private/codex-witness/leningrad/Genesis.*.json; private/codex-witness/swete/01.Genesis.txt
+MIME-Version: 1.0
+Content-Type: application/yaml; charset=utf-8
+Content-Transfer-Encoding: binary
+Content-Length: 3491
+Content-Description: Where the Hebrew writes the Name, what the Greek writes: Genesis, Leningrad against Swete (Alexandrinus); CC BY-SA 4.0 (Open Greek and Latin First1KGreek, lxx-swete)
+
+"KYRIOS":
+  title: "Where the Hebrew writes the Name, what the Greek writes"
+  witnesses: "Hebrew: Westminster Leningrad Codex (public domain), via Sefaria. Greek: Swete, The Old Testament in Greek, whose Genesis is Codex Alexandrinus; digital text Open Greek and Latin First1KGreek via lxx-swete, CC BY-SA 4.0, so this article is CC BY-SA 4.0"
+  scope: "Genesis 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 50: the chapters held in both witnesses; verses are paired by number"
+  method: "counted by a script: Hebrew words whose consonants are יהוה or אלהים after at most two prefix letters; Greek words that are a case form of κύριος or θεός (κύριος, κυρίου, κυρίῳ, κύριον, κύριε; θεός, θεοῦ, θεῷ, θεόν, θεέ), accents removed"
+  totals: "יהוה 40, κύριος 35; אלהים 87, θεός 101"
+  agreement: "39 verses have the Name or κύριος; the counts agree in 28 and differ in 11"
+  differences:
+    - verse: "Genesis 2:5"
+      counts: "יהוה 1, κύριος 0; אלהים 1, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 2:7"
+      counts: "יהוה 1, κύριος 0; אלהים 1, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 2:9"
+      counts: "יהוה 1, κύριος 0; אלהים 1, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 2:19"
+      counts: "יהוה 1, κύριος 0; אלהים 1, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 2:21"
+      counts: "יהוה 1, κύριος 0; אלהים 1, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 6:6"
+      counts: "יהוה 1, κύριος 0; אלהים 0, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 6:7"
+      counts: "יהוה 1, κύριος 0; אלהים 0, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 6:12"
+      counts: "יהוה 0, κύριος 1; אלהים 1, θεός 1"
+      kind: "God (אלהים) alone in Hebrew; Lord God (κύριος ὁ θεός) in Greek"
+    - verse: "Genesis 8:15"
+      counts: "יהוה 0, κύριος 1; אלהים 1, θεός 1"
+      kind: "God (אלהים) alone in Hebrew; Lord God (κύριος ὁ θεός) in Greek"
+    - verse: "Genesis 8:20"
+      counts: "יהוה 1, κύριος 0; אלהים 0, θεός 1"
+      kind: "the Name in Hebrew; God (θεός) without κύριος in Greek"
+    - verse: "Genesis 9:12"
+      counts: "יהוה 0, κύριος 1; אלהים 1, θεός 1"
+      kind: "God (אלהים) alone in Hebrew; Lord God (κύριος ὁ θεός) in Greek"
+  creation: "Genesis 1: אלהים 32, θεός 33, and no יהוה or κύριος. Genesis 2:4-3:24: יהוה 20, κύριος 15; in five verses of Genesis 2 the Greek has ὁ θεός alone where the Hebrew has יהוה אלהים"
+  result: "the first translation step is not one for one. The Greek has no κύριος in 8 verses where the Hebrew writes the Name, and adds κύριος in 3 where the Hebrew has only אלהים. That the Name is read as Lord is a reading; where the Greek writes κύριος, and where it does not, is literal"
