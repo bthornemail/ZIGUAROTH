@@ -1,0 +1,19 @@
+ZIGUA-ROTH: unbound/TSX/src/templates/Atomic Incidence Surface.tsx; boxed/_archive/The 60-in-64 Clock.md; omi-axioms js/catalog/I-230.ts
+MIME-Version: 1.0
+Content-Type: application/yaml; charset=utf-8
+Content-Transfer-Encoding: binary
+Content-Length: 3288
+Content-Description: The sonar's 75: claim, proof (omi-axioms I-230), what holds and what fails in its sources, and the author's reading
+
+"SONAR":
+  title: "The sonar's 75: the full closure"
+  claim: "SONAR_PERIOD 75 in unbound's Atomic Incidence Surface (its comment: 5 channels * 15 lanes) is the 60-in-64 dial with five blocks of 16 slots, 15 carrying time; it precesses one channel per 5040-tick master cycle and closes at 25,200 = 5 x 5040 = 7 x 3 x 5 x 240, because 75 = 3 x 5^2 carries a second 5 that 7! does not"
+  predictions: "filed in the header of I-230 before its checks ran: P1 one dial, three sizes (60 = 4 x 15, 240 = 16 x 15, 75 = 5 x 15); P2 60 closes on 5040, 75 does not, 5040 mod 75 = 15; P3 start channels 0 1 2 3 4 0; P4 lcm(5040, 75) = 25,200 = 7 x 3 x 5 x 240; P5 the 5 is the reason, and the whole 80-slot dial closes; P6 only 80 is not a power of two; P7 525 = lcm(7, 75); P8 25,200 closes the 4-, 28- and 400-year cycles, not the 19. All eight hold"
+  proof: "omi-axioms js/catalog/I-230.ts, tag 6E, commit aae9768 (merged cbac392); it also runs the component's own channel formula over all 25,200 ticks and finds every channel gets the same number"
+  state: "checked"
+  sources: "unbound TSX/src/templates/Atomic Incidence Surface.tsx (the 75, the 15, the five channels, the % 525); boxed/_archive/The 60-in-64 Clock.md (the 15-of-16 dial and the 7 x 3 x 240 stack); boxed/_archive/The 240 LED Clock A Geometric.md; boxed/_archive/The Full 60 and the Blocking.md; Longstaff, Calendars from around the world (the calendar cycles)"
+  holds: "The 60-in-64 Clock: all of it, as it says (it keeps only what holds as arithmetic). The Full 60 and the Blocking: the XOR orbit of 60 visits all 64 values once, and the 0x30-0x3F four-block (I-129b). The 240 LED Clock: 240 = 15 x 16 = 256 - 16 = 60 x 4"
+  fails: "The Full 60 and the Blocking: the orbit falls into 16 blocks of four, not 12 (the 12 and the skips came from which rows were listed); its fold table's claim that delta^8(x, c) = x for every x and c is contradicted by I-195 (under C = 0x1D1D, 8 states are fixed and others have periods 2 and 4), and its fold changes C each cycle, a recurrence whose period is not established. The 240 LED Clock: only 0x00-0x1F are control codes, not 0x00-0x3B; its Klein configuration is misstated and 240 is not shown to be its group order; its formula sums 24 terms over 23 offsets; its section 15 ends in a non-integer. The 240 that holds in the proofs is the 240 roots of E8 (Coq E8RootsEnumerate240.v)"
+  timelines: "with the astronomical year index as the tick: 2 BC (10100, index -1) is phase 74, the last lane of channel 4; 1 BC (10101, index 0) is phase 0, the reset; AD 1 (10102, index 1) is phase 1; AD 525 is phase 0 again, since 525 = 7 x 75; AD 2026 is phase 1, since 2025 = 27 x 75. Every period resets at index 0; what is particular to 75 is that AD 525 shares the reset"
+  years: "Hebrew AM 6000 begins at index 2239, autumn AD 2239 (AM n begins at n - 3761, Longstaff line 539); the year that began in autumn 2026 is AM 5787. On the Septuagint-based count, AM 6000 fell near AD 500 (ANNOMUNDI)"
+  reading: "the author's, held open: the 75 is the full closure he was reaching for; like 525 and the time told to close fully, the 6000 years; relevant to the leap years and the prime meridian (15 lanes = 360 / 24 degrees, one hour of the Earth's turn); the fifth channel as the hidden 5 of 5!"
