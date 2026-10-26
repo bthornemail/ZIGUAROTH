@@ -1,0 +1,17 @@
+ZIGUA-ROTH: private/codex-witness/leningrad/Genesis.*.json; private/codex-witness/kjv/raw/usfm/02-GENeng-kjv2006.usfm
+MIME-Version: 1.0
+Content-Type: application/yaml; charset=utf-8
+Content-Transfer-Encoding: binary
+Content-Length: 1673
+Content-Description: Where the Hebrew writes the Name, what the King James Version writes: Genesis, Leningrad against the KJV (eBible eng-kjv2006); CC BY-SA 4.0
+
+"LORD":
+  title: "Where the Hebrew writes the Name, what the King James Version writes"
+  witnesses: "Hebrew: Westminster Leningrad Codex (public domain), via Sefaria. English: the King James Version, 1769 standard text, with Strong's numbers, eBible.org eng-kjv2006 (public domain; Crown patent in the UK). Greek, for comparison: Swete (Alexandrinus), lxx-swete, CC BY-SA 4.0, so this article is CC BY-SA 4.0"
+  scope: "Genesis 1, 2, 3, 5-11 and 50, paired by verse number"
+  method: "counted by a script: in the KJV, words carrying strong=H3068 (Strong's number for יהוה) and words inside the divine-name mark (backslash nd), against Hebrew words whose consonants are יהוה after at most two prefix letters"
+  totals: "יהוה 40; KJV marked Name 40 (H3068 40, divine-name mark 40); Greek κύριος 35"
+  agreement: "the KJV marks the Name in exactly the verses where the Hebrew writes it: 0 differences. In all 11 verses where the Greek departs from the Hebrew (KYRIOS), the KJV follows the Hebrew"
+  exception: "Genesis 6:5 reads And GOD saw: the Name is printed GOD, in small capitals, not LORD; the mark and H3068 still record that the Hebrew has יהוה. So the plain word LORD occurs 39 times and the marked Name 40"
+  layers: "the small capitals are a printers' convention of the KJV tradition and Strong's numbers (1890) are an editor's overlay; both point back to the Hebrew letters, which is why the English keeps a trace of the Name the Greek sometimes drops"
+  result: "Hebrew to English, the KJV is one for one with the Name in these chapters; Hebrew to Greek it is not. The English witness was translated from the Hebrew, not through the Greek"
