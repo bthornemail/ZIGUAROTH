@@ -10,6 +10,8 @@ enters this list before anything from it enters the codex. Draft, 2026-10-25.
 | Westminster Leningrad Codex | Sefaria API, version "Tanach with Ta'amei Hamikra", from tanach.us (`Tanach.xml`) | Public domain | Quote freely; credit the edition and Sefaria |
 | Miqra according to the Masorah (MAM), based on the Aleppo Codex | Sefaria API, from he.wikisource (User:Dovi) | CC BY-SA | Quote with credit; anything adapted from it must be shared under CC BY-SA or a compatible licence |
 | Calendars from around the world, Alan Longstaff | National Maritime Museum, 2005; a copy at boxed/_archive/_inbox | © National Maritime Museum 2005 | Cite, and quote only briefly; its text MUST NOT be copied into the codex |
+| Septuagint, Swete's edition (Genesis: Codex Alexandrinus) | github.com/nathans/lxx-swete, data/01.Genesis.txt (commit 26bad3eb42bb), from Open Greek and Latin First1KGreek (tlg0527) | Edition public domain; digital text CC BY-SA 4.0 | Quote with credit to Open Greek and Latin / First1KGreek and lxx-swete; anything adapted from it is CC BY-SA 4.0. Its digitization errors are declared as folds, never silently corrected |
+| Wikipedia, Anno Domini | en.wikipedia.org/wiki/Anno_Domini, passage pasted by the author 2026-10-25 | CC BY-SA 4.0 | Paraphrase or quote with credit; it attributes the end-of-the-world motive to Georges Declercq |
 | Codex Sinaiticus transcription | codexsinaiticus.org (`handler/transcription.ashx`) | "only for non-commercial personal and educational use"; other uses need written permission from the British Library, Leipzig University Library, St Catherine's Monastery and the National Library of Russia | **Never the text.** Only verse references and the fact that a reading differs |
 
 Credit for MAM, when the codex quotes it:
