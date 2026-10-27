@@ -1,9 +1,9 @@
-ZIGUA-ROTH: boxedPINE space/src/exchange.ts; boxedPINE src/testbed/space.test.ts; omi-axioms js/catalog/I-207.ts; boxed src/omi_genesis.c
+ZIGUA-ROTH: boxedPINE space/src/exchange.ts; boxedPINE src/testbed/space.test.ts; omi-axioms js/catalog/I-207.ts; boxed src/omi_genesis.c; omi-axioms js/catalog/I-231.ts
 MIME-Version: 1.0
 Content-Type: application/yaml; charset=utf-8
 Content-Transfer-Encoding: binary
-Content-Length: 4024
-Content-Description: CDL: the 2 x 2 of rule types from two flags, the boot kernel's C primitives classified, corrections recorded; CC BY-SA 4.0
+Content-Length: 4320
+Content-Description: CDL: the 2 x 2 of rule types from two flags, the boot kernel's C primitives classified, corrections recorded; proof omi-axioms I-231; CC BY-SA 4.0
 
 "CDL":
   title: "CDL: the Compiler Description Language, and the rule that changes nothing unless it succeeds"
@@ -17,4 +17,6 @@ Content-Description: CDL: the 2 x 2 of rule types from two flags, the boot kerne
   reading: "the labels Day 3 and Day 5; the four code points as the layers CDL, WSN, ALGOL 60 and Plan 9; the closure of four as the tetrahedron's vertices; the compare-exchange as the modal operator the strict logic builds on (the author, 2026-10-27: this is the modal that the strict logic builds on)"
   corrections: "recorded from earlier conversations: CDL is Koster's (1971), not C. H. Lindsey's; the construct ... is ... syntax shown for CDL was invented (CDL uses affix grammar rules); a total order on a fixed set is a line, not a cycle; stars and bars counts distributions of identical items into bins, not ordered sequences of cells; BRIAN XOR CODEX XOR DEEPS = EXHTE is a closure of four, not a Steiner or Fano triple (a Fano line is three points whose XOR is zero); I-229's verdict compares prefixes, not bits, so MIRROR is not literally XNOR; the kernel's stateA XOR stateB == 0 tests equality, which is not I-229's empty-base guard"
   unreachable: "in the omi_genesis.c proposed on 2026-10-26, the Day 5 / Index 63 transition requires texture16 odd; texture counts the bit flips around a closed loop of 16 bits, which is always even, so the condition holds for 0 of 65,536 values and Index 63 can never fire. The Day 3 / Index 59 condition (even texture, density 8) holds for 12,870 values, C(16, 8): every value with 8 bits set. Checked by compiling the two conditions over all 16-bit values"
+  proof: "omi-axioms js/catalog/I-231.ts, tag 6F (commit 4febd46, merged 3d7ee34): the four primitives run on a shared buffer, their flags observed, the exchange law checked for all 128 frames, and the Day 5 condition counted; seven predictions filed before the run, all hold"
+  state: "checked"
   sources: "Wikipedia, Compiler Description Language and Cornelis H. A. Koster (CC BY-SA 4.0, so this article is CC BY-SA 4.0); Koster et al., CDL3 manual 1.2.7, ftp.cs.ru.nl/cdl3 (cited, not quoted); ISO C11 7.17.7.4; boxedPINE space/src/exchange.ts and src/testbed/space.test.ts; omi-axioms js/catalog/I-207.ts"
