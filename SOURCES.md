@@ -14,6 +14,8 @@ enters this list before anything from it enters the codex. Draft, 2026-10-25.
 | Wikipedia, Anno Domini | en.wikipedia.org/wiki/Anno_Domini, passage pasted by the author 2026-10-25 | CC BY-SA 4.0 | Paraphrase or quote with credit; it attributes the end-of-the-world motive to Georges Declercq |
 | Codex Alexandrinus (British Library, Royal MS 1 D V), Kenyon's reduced photographic facsimile, British Museum 1915 | Internet Archive, TheCodexAlexandrinusV.1 | Public domain mark | Cite by facsimile page and manuscript folio; readings by eye are labelled as such |
 | King James Version, 1769 standard text with Strong's numbers | eBible.org, eng-kjv2006_usfm.zip (files dated 2026-10-20) | Public domain (Crown letters patent in the UK) | Quote freely outside the UK; the divine-name mark and Strong's numbers are later layers and are named as such |
+| Wikipedia, Compiler Description Language; Cornelis H. A. Koster | en.wikipedia.org | CC BY-SA 4.0 | Paraphrase or quote with credit; adapted text stays CC BY-SA |
+| Koster et al., CDL3 manual 1.2.7 | ftp.cs.ru.nl/cdl3 | Not stated | Cite only |
 | Codex Sinaiticus transcription | codexsinaiticus.org (`handler/transcription.ashx`) | "only for non-commercial personal and educational use"; other uses need written permission from the British Library, Leipzig University Library, St Catherine's Monastery and the National Library of Russia | **Never the text.** Only verse references and the fact that a reading differs |
 
 Credit for MAM, when the codex quotes it:
