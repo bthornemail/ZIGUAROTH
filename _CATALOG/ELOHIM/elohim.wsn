@@ -1,0 +1,9 @@
+ELOHIM = NAME LITERAL IS FROM FIRST OCCURS RELATED FINALS .
+NAME = "Elohim" .
+LITERAL = "אלהים" .
+IS = "the name of God in the first creation account" .
+FROM = "the Westminster Leningrad Codex (public domain), via Sefaria" .
+FIRST = "Genesis 1:1, the third word: בראשית ברא אלהים" .
+OCCURS = "32 times in Genesis 1, and 35 times in Genesis 1:1 to 2:3, always the bare word with no prefix" .
+RELATED = "it is the second word of YHWH Elohim, the name used from Genesis 2:4" .
+FINALS = "the last letter is final mem ם (U+05DD), kept as written" .
