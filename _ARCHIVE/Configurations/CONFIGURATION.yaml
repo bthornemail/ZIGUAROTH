@@ -56,8 +56,8 @@
     "-6":
       name: "CONFIGURATIONS"
       folder: "_ARCHIVE/Configurations"
-      files: "*.yaml"
-      language: "YAML"
+      files: "*.yaml, *.wsn"
+      language: "YAML, Wirth syntax notation"
     "-7":
       name: "MACROS"
       folder: "_ARCHIVE/Macros"
@@ -94,7 +94,7 @@
     mask: "the author, 2026-10-25: we do not have a truth; we have a way to separate views and maintain structure. The difference between witnesses is a pixel mask, one bit per letter cell, per layer (letters, marks), computed and never resolved. Leningrad and MAM at Deuteronomy 29:1: letters 0000, marks 0100. The tool is _ARCHIVE/Expressions/mask.js"
     open: "LENINGRAD has nine letters, one over a tag"
     timelines: "the author, 2026-10-25: _CODE/U/28 is logical time, the units of the atomic kernel clock (the Delta Law); _CODE/U/10100, 10101 and 10102 are the astronomical year numbering, n-1, n and n+1: 10100 is -1 (2 BC), 10101 is 0 (1 BC), 10102 is +1 (AD 1)"
-    views: "the author, 2026-10-27: the reading of a folder depends on the view that resolves it. A folder's name is the literal; each view is declared, sourced and kept beside the others, never resolved into one. The views are in _ARCHIVE/Configurations/VIEWS.yaml; the check is _ARCHIVE/Expressions/views.js"
+    views: "the author, 2026-10-27: the reading of a folder depends on the view that resolves it. A folder's name is the literal; each view is declared, sourced and kept beside the others, never resolved into one. The views are in _ARCHIVE/Configurations/VIEWS.wsn; the check is _ARCHIVE/Expressions/views.js"
     years: "BC/AD counts ordinals and has no year zero (Bede counted back from Dionysius' AD 1); astronomers since the 18th century count an index with a year zero, so AD 1 = +1, 1 BC = 0, 2 BC = -1; BCE/CE rename BC/AD and count the same way (Longstaff, Calendars from around the world, National Maritime Museum 2005)"
   rules:
     - id: "S1"
@@ -215,7 +215,7 @@
       group: "catalog"
       subject: "an entry"
       predicate: "is"
-      object: "a path of its name's barrels, one capital folder per barrel, ending in one file named by its last barrel in lower case with .yaml: _CATALOG/YHWH/yhwh.yaml, _CATALOG/YHWH/ELOHIM/elohim.yaml"
+      object: "a path of its name's barrels, one capital folder per barrel, ending in one file named by its last barrel in lower case with .wsn: _CATALOG/YHWH/yhwh.wsn, _CATALOG/YHWH/ELOHIM/elohim.wsn"
       modality: "MUST"
     - id: "C4"
       group: "catalog"
