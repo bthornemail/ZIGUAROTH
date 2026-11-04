@@ -69,8 +69,29 @@ const aegean = (s) => [...s].map((c) => numeralOf(c.codePointAt(0))).join(" ");
 const xorLine = (lit, key, xnor) => { const k = Buffer.from(key, "ascii"); return [...Buffer.from(lit, "utf8")].map((b, i) => ch(CELL + ((b ^ (k[i] ?? 0)) ^ (xnor ? 0xff : 0)))).join(""); };
 const where = (tag) => [path.join("_CODEX", tag[0] + tag[0], tag), path.join("_CODICES", tag[0].repeat(4), tag)];
 
-function witnessed(tag, w) {	// w: { aleppo?, leningrad? }, each { literal, at }
-  const S = [["ALEPPO", w.aleppo], ["ROSETTA", null], ["BEHISTUN", null], ["LENINGRAD", w.leningrad]];
+// ── the two inscriptions in their scripts (SOURCES.md): ROSETTA's Greek by its 54 lines ({{Zeile|n}}), BEHISTUN's Old
+// Persian by Column I's 19 sections ({{verse|verse=n}}); a word counts only whole, outside the editors' brackets, and
+// the editors' notes (<ref>) set aside ──
+const units = (text, marker) => {
+  const body = text.replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, "").replace(/<ref[^>]*\/>/g, "");
+  const out = [], re = new RegExp(marker.source, "g");
+  let m, last = 0, cur = null;
+  while ((m = re.exec(body))) { if (cur !== null) out.push([cur, body.slice(last, m.index)]); cur = m[1]; last = re.lastIndex; }
+  if (cur !== null) out.push([cur, body.slice(last)]);
+  return out;
+};
+const tokens = (s, letters) => s.replace(/<[^>]+>|\{\{[^}]*\}\}/g, " ").split(new RegExp(`[^${letters}\\[\\]]+`, "u")).filter((w) => w && !/[\[\]]/.test(w));
+function inscription(file, marker, letters, form, where) {
+  const text = fs.readFileSync(path.join(WIT, file), "utf8");
+  for (const [n, s] of units(text, marker)) if (tokens(s, letters).includes(form)) return { literal: form, at: where(n) };
+  return null;
+}
+const GREEK = "\\u0370-\\u03ff\\u1f00-\\u1fff", PERSIAN = "\\u{103A0}-\\u{103CF}";
+const rosettaOf = (form) => form && inscription("rosetta/rosettana.wikitext", /\{\{Zeile\|(\d+)\}\}/, GREEK, form, (n) => `Rosetta Stone, Greek line ${n}`);
+const behistunOf = (form) => form && inscription("behistun/col1.wikitext", /\{\{verse\|verse=(\d+)\}\}/, PERSIAN, form, (n) => `Behistun, Column I, section ${n}`);
+
+function witnessed(tag, w) {	// w: { aleppo?, rosetta?, behistun?, leningrad? }, each { literal, at }
+  const S = [["ALEPPO", w.aleppo], ["ROSETTA", w.rosetta ?? null], ["BEHISTUN", w.behistun ?? null], ["LENINGRAD", w.leningrad]];
   const head = `${tag} = ${S.map(([n, x]) => (x ? n : "OPTWHITESPACE")).join(" ")} .\nOPTWHITESPACE = { " " } .\n`;
   let codex = "", beside = head, codices = head;
   S.forEach(([n, x], i) => { codex += `[${i}] ${n}\n` + (x ? `${braille(x.literal)}\n${aegean(x.literal)}\n` : "\n"); });
@@ -97,7 +118,21 @@ for (const [rel, text] of [...again("YHWH", "_CODICES/YYYY/YHWH/yhwh.wsn", ["ALE
   assert.equal(text, fs.readFileSync(path.join(ROOT, rel), "utf8"), `${rel}: written again byte for byte`);
 
 // ── the variations ──
+// ── the terms of all four witnesses (the author, 2026-11-04: "KING, then GOD"): the Hebrew form in Aleppo and
+// Leningrad as above, the Greek in Rosetta, the Old Persian in Behistun. For GOD, Behistun's Column I names the god,
+// Auramazda, and has no common noun for god; the god named stands in that section. ──
+const FOUR = [
+  { tag: "KING", form: "מֶלֶךְ", greek: "ΒΑΣΙΛΕΥΣ", persian: "𐎧𐏁𐎠𐎹𐎰𐎡𐎹" },
+  { tag: "GOD", form: "אֱלֹהִים", greek: "ΘΕΟΣ", persian: "𐎠𐎢𐎼𐎶𐏀𐎭𐎠" },
+].map((t) => ({ ...t, form: t.form.normalize("NFC") }));
+
 const out = [], report = [];
+for (const { tag, form, greek, persian } of FOUR) {
+  const w = { ...witness(form), rosetta: rosettaOf(greek), behistun: behistunOf(persian) };
+  for (const s of ["aleppo", "rosetta", "behistun", "leningrad"]) assert.ok(w[s], `${tag}: a ${s} witness`);
+  out.push(...witnessed(tag, w));
+  report.push(`  ${tag.padEnd(10)} ` + ["aleppo", "rosetta", "behistun", "leningrad"].map((s) => `${w[s].literal} ${w[s].at}`).join("; "));
+}
 for (const { tag, form } of HEBREW) {
   const w = witness(form);
   assert.ok(w.leningrad, `${tag}: ${form} stands in Leningrad`);
@@ -113,6 +148,6 @@ for (const [rel, text] of out) {
   if (!DRY) { fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, text); }
   written++;
 }
-console.log(`variations.js: YHWH and ELOHIM written again byte for byte; ${HEBREW.length} Hebrew terms from the witnesses, ${PLAIN.length} without:`);
+console.log(`variations.js: YHWH and ELOHIM written again byte for byte; ${FOUR.length} terms in all four witnesses, ${HEBREW.length} Hebrew terms from the witnesses, ${PLAIN.length} without:`);
 console.log(report.join("\n"));
 console.log(`${DRY ? "would write" : "wrote"} ${written} files`);

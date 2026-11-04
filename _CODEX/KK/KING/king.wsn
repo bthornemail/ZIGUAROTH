@@ -1,0 +1,14 @@
+KING = ALEPPO ROSETTA BEHISTUN LENINGRAD .
+OPTWHITESPACE = { " " } .
+ALEPPO = ALEPPOBRAILLE ALEPPOAEGEAN .
+ALEPPOBRAILLE = "⣗⢞ ⣖⢶ ⣗⢜ ⣖⢶ ⣗⢚ ⣖⢰" .
+ALEPPOAEGEAN = "𐄢𐄝𐄈 𐄢𐄜𐄕𐄈 𐄢𐄝 𐄢𐄜𐄕𐄈 𐄢𐄜𐄘𐄎 𐄢𐄜𐄔𐄌" .
+ROSETTA = ROSETTABRAILLE ROSETTAAEGEAN .
+ROSETTABRAILLE = "⣎⢒ ⣎⢑ ⣎⢣ ⣎⢙ ⣎⢛ ⣎⢕ ⣎⢥ ⣎⢣" .
+ROSETTAAEGEAN = "𐄡𐄐𐄊 𐄡𐄐𐄉 𐄡𐄒𐄇 𐄡𐄑𐄇 𐄡𐄑𐄉 𐄡𐄐𐄍 𐄡𐄒𐄉 𐄡𐄒𐄇" .
+BEHISTUN = BEHISTUNBRAILLE BEHISTUNAEGEAN .
+BEHISTUNBRAILLE = "⣰⢐⢎⢧ ⣰⢐⢏⢁ ⣰⢐⢎⢠ ⣰⢐⢎⢹ ⣰⢐⢎⢰ ⣰⢐⢎⢡ ⣰⢐⢎⢹" .
+BEHISTUNAEGEAN = "𐄰𐄧𐄜𐄖𐄇 𐄰𐄧𐄜𐄘𐄍 𐄰𐄧𐄜𐄕𐄊 𐄰𐄧𐄜𐄗𐄏 𐄰𐄧𐄜𐄗 𐄰𐄧𐄜𐄕𐄋 𐄰𐄧𐄜𐄗𐄏" .
+LENINGRAD = LENINGRADBRAILLE LENINGRADAEGEAN .
+LENINGRADBRAILLE = "⣗⢞ ⣖⢶ ⣗⢜ ⣖⢶ ⣗⢚ ⣖⢰" .
+LENINGRADAEGEAN = "𐄢𐄝𐄈 𐄢𐄜𐄕𐄈 𐄢𐄝 𐄢𐄜𐄕𐄈 𐄢𐄜𐄘𐄎 𐄢𐄜𐄔𐄌" .

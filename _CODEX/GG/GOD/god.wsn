@@ -1,0 +1,14 @@
+GOD = ALEPPO ROSETTA BEHISTUN LENINGRAD .
+OPTWHITESPACE = { " " } .
+ALEPPO = ALEPPOBRAILLE ALEPPOAEGEAN .
+ALEPPOBRAILLE = "⣗⢐ ⣖⢱ ⣗⢜ ⣖⢹ ⣗⢔ ⣖⢴ ⣗⢙ ⣗⢝" .
+ALEPPOAEGEAN = "𐄢𐄜𐄗𐄎 𐄢𐄜𐄔𐄍 𐄢𐄝 𐄢𐄜𐄕𐄋 𐄢𐄜𐄘𐄈 𐄢𐄜𐄕 𐄢𐄜𐄘𐄍 𐄢𐄝𐄇" .
+ROSETTA = ROSETTABRAILLE ROSETTAAEGEAN .
+ROSETTABRAILLE = "⣎⢘ ⣎⢕ ⣎⢟ ⣎⢣" .
+ROSETTAAEGEAN = "𐄡𐄑 𐄡𐄐𐄍 𐄡𐄑𐄍 𐄡𐄒𐄇" .
+BEHISTUN = BEHISTUNBRAILLE BEHISTUNAEGEAN .
+BEHISTUNBRAILLE = "⣰⢐⢎⢠ ⣰⢐⢎⢢ ⣰⢐⢎⢼ ⣰⢐⢎⢶ ⣰⢐⢏⢀ ⣰⢐⢎⢭ ⣰⢐⢎⢠" .
+BEHISTUNAEGEAN = "𐄰𐄧𐄜𐄕𐄊 𐄰𐄧𐄜𐄕𐄌 𐄰𐄧𐄜𐄘𐄈 𐄰𐄧𐄜𐄗𐄌 𐄰𐄧𐄜𐄘𐄌 𐄰𐄧𐄜𐄖𐄍 𐄰𐄧𐄜𐄕𐄊" .
+LENINGRAD = LENINGRADBRAILLE LENINGRADAEGEAN .
+LENINGRADBRAILLE = "⣗⢐ ⣖⢱ ⣗⢜ ⣖⢹ ⣗⢔ ⣖⢴ ⣗⢙ ⣗⢝" .
+LENINGRADAEGEAN = "𐄢𐄜𐄗𐄎 𐄢𐄜𐄔𐄍 𐄢𐄝 𐄢𐄜𐄕𐄋 𐄢𐄜𐄘𐄈 𐄢𐄜𐄕 𐄢𐄜𐄘𐄍 𐄢𐄝𐄇" .
