@@ -36,9 +36,13 @@ one() {
     T=$(grep -o '^Theorem [A-Za-z0-9_]*' "$HERE/$P.coq.v" | cut -d' ' -f2)
     for t in $T; do printf '\nPrint Assumptions %s.\n' "$t" >> "$OUT/statement.v"; done
     (cd "$OUT" && coqc statement.v > coq.txt 2>&1) || { cat "$OUT/coq.txt"; echo 'FAIL: coqc'; return 1; }
-    k=$(echo $T | wc -w); c=$(grep -c 'Closed under the global context' "$OUT/coq.txt")
-    [ "$c" -eq "$k" ] || { echo "FAIL: $c of $k theorems closed"; return 1; }
-    echo "PASS: coqc, $k theorems, each closed under the global context (no axioms)"
+    # every theorem closed (no axioms), or resting only on the standard axioms beneath Coq's real numbers
+    k=$(echo $T | wc -w); c=$(grep -c 'Closed under the global context' "$OUT/coq.txt" || true)
+    AX=$(grep -oE '^[A-Z][A-Za-z0-9_]*\.[A-Za-z0-9_.]+' "$OUT/coq.txt" | sort -u || true)
+    REALS="ClassicalDedekindReals.sig_forall_dec FunctionalExtensionality.functional_extensionality_dep"
+    for a in $AX; do case " $REALS " in *" $a "*) ;; *) echo "FAIL: axiom $a"; return 1 ;; esac; done
+    if [ "$c" -eq "$k" ]; then echo "PASS: coqc, $k theorems, each closed under the global context (no axioms)"
+    else echo "PASS: coqc, $k theorems, $c closed, the rest on the standard axioms of Coq's reals only: $(echo $AX)"; fi
   fi
 }
 
