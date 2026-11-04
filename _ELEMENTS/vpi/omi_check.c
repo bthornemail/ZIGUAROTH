@@ -43,6 +43,26 @@ static PLI_INT32 equilateral_calltf(PLI_BYTE8 *data) {
 
 static PLI_INT32 equilateral_sizetf(PLI_BYTE8 *data) { (void)data; return 32; }
 
+/* $omi_equal_length(A, L, B, C) returns 1 when AL and BC have the same length and are not points: N(L - A) = N(C - B) > 0. */
+static PLI_INT32 equal_length_calltf(PLI_BYTE8 *data) {
+  vpiHandle self = vpi_handle(vpiSysTfCall, NULL), it = vpi_iterate(vpiArgument, self);
+  int ax, ay, lx, ly, bx, by, cx, cy;
+  s_vpi_value out;
+  (void)data;
+  point(vpi_scan(it), &ax, &ay);
+  point(vpi_scan(it), &lx, &ly);
+  point(vpi_scan(it), &bx, &by);
+  point(vpi_scan(it), &cx, &cy);
+  vpi_free_object(it);
+  {
+    long al = norm(lx - ax, ly - ay), bc = norm(cx - bx, cy - by);
+    out.format = vpiIntVal;
+    out.value.integer = (bc > 0 && al == bc) ? 1 : 0;
+  }
+  vpi_put_value(self, &out, NULL, vpiNoDelay);
+  return 0;
+}
+
 void omi_check_register(void) {
   s_vpi_systf_data tf;
   tf.type = vpiSysFunc;
@@ -52,6 +72,9 @@ void omi_check_register(void) {
   tf.compiletf = NULL;
   tf.sizetf = equilateral_sizetf;
   tf.user_data = NULL;
+  vpi_register_systf(&tf);
+  tf.tfname = "$omi_equal_length";
+  tf.calltf = equal_length_calltf;
   vpi_register_systf(&tf);
 }
 
