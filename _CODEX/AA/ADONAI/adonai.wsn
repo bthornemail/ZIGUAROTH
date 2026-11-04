@@ -1,0 +1,8 @@
+ADONAI = ALEPPO OPTWHITESPACE OPTWHITESPACE LENINGRAD .
+OPTWHITESPACE = { " " } .
+ALEPPO = ALEPPOBRAILLE ALEPPOAEGEAN .
+ALEPPOBRAILLE = "⣗⢐ ⣖⢲ ⣗⢓ ⣖⢹ ⣗⢠ ⣖⢸ ⣗⢙" .
+ALEPPOAEGEAN = "𐄢𐄜𐄗𐄎 𐄢𐄜𐄔𐄎 𐄢𐄜𐄘𐄇 𐄢𐄜𐄕𐄋 𐄢𐄝𐄊 𐄢𐄜𐄕𐄊 𐄢𐄜𐄘𐄍" .
+LENINGRAD = LENINGRADBRAILLE LENINGRADAEGEAN .
+LENINGRADBRAILLE = "⣗⢐ ⣖⢲ ⣗⢓ ⣖⢹ ⣗⢠ ⣖⢸ ⣗⢙" .
+LENINGRADAEGEAN = "𐄢𐄜𐄗𐄎 𐄢𐄜𐄔𐄎 𐄢𐄜𐄘𐄇 𐄢𐄜𐄕𐄋 𐄢𐄝𐄊 𐄢𐄜𐄕𐄊 𐄢𐄜𐄘𐄍" .
