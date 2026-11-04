@@ -1,0 +1,8 @@
+BYHWH = ALEPPO OPTWHITESPACE OPTWHITESPACE LENINGRAD .
+OPTWHITESPACE = { " " } .
+ALEPPO = ALEPPOBRAILLE ALEPPOAEGEAN .
+ALEPPOBRAILLE = "⣗⢑ ⣖⢷ ⣖⢼ ⣗⢙ ⣗⢔ ⣖⢹ ⣗⢕ ⣖⢸ ⣗⢔" .
+ALEPPOAEGEAN = "𐄢𐄜𐄗𐄏 𐄢𐄜𐄕𐄉 𐄢𐄜𐄕𐄎 𐄢𐄜𐄘𐄍 𐄢𐄜𐄘𐄈 𐄢𐄜𐄕𐄋 𐄢𐄜𐄘𐄉 𐄢𐄜𐄕𐄊 𐄢𐄜𐄘𐄈" .
+LENINGRAD = LENINGRADBRAILLE LENINGRADAEGEAN .
+LENINGRADBRAILLE = "⣗⢑ ⣖⢷ ⣖⢼ ⣗⢙ ⣗⢔ ⣗⢕ ⣖⢸ ⣗⢔" .
+LENINGRADAEGEAN = "𐄢𐄜𐄗𐄏 𐄢𐄜𐄕𐄉 𐄢𐄜𐄕𐄎 𐄢𐄜𐄘𐄍 𐄢𐄜𐄘𐄈 𐄢𐄜𐄘𐄉 𐄢𐄜𐄕𐄊 𐄢𐄜𐄘𐄈" .
