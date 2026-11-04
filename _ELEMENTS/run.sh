@@ -2,7 +2,7 @@
 # run.sh — compile the VPI check once for each simulator and run a proposition's testbench under both: GPL Cver
 # (the author's minimum basis) and Icarus Verilog. Each prints one line of numbers; the two lines must be the same
 # numbers, and for I-1 they must read: pairs, all pairs held, all pairs apart, no third-of-a-turn point equilateral.
-#   sh run.sh I/I-1        (runs I/I-1.v with I/I-1.tb.v)
+#   sh run.sh I/I-1        (runs I/I-1.v with I/I-1.tb.v, then coqc on I/I-1.coq.v)
 set -eu
 HERE=$(cd "$(dirname "$0")" && pwd)
 P=${1:-I/I-1}
@@ -20,3 +20,13 @@ printf 'icarus: %s\n' "$(cat "$OUT/icarus.txt")"
 set -- $(cat "$OUT/cver.txt")
 [ "$#" -eq 4 ] && [ "$1" -gt 0 ] && [ "$2" -eq "$1" ] && [ "$3" -eq "$1" ] && [ "$4" -eq 0 ] || { echo "FAIL: $*"; exit 1; }
 echo "PASS: $1 pairs; both meeting points equilateral in all $2, apart in all $3; the third-of-a-turn point in $4"
+# the general statement, for every A and B: the Coq file beside the Verilog, if there is one, must check with no axioms
+if [ -f "$HERE/$P.coq.v" ]; then
+  cp "$HERE/$P.coq.v" "$OUT/statement.v"
+  T=$(grep -o '^Theorem [A-Za-z0-9_]*' "$HERE/$P.coq.v" | cut -d' ' -f2)
+  for t in $T; do printf '\nPrint Assumptions %s.\n' "$t" >> "$OUT/statement.v"; done
+  (cd "$OUT" && coqc statement.v > coq.txt 2>&1) || { cat "$OUT/coq.txt"; echo 'FAIL: coqc'; exit 1; }
+  n=$(echo $T | wc -w); c=$(grep -c 'Closed under the global context' "$OUT/coq.txt")
+  [ "$c" -eq "$n" ] || { echo "FAIL: $c of $n theorems closed"; exit 1; }
+  echo "PASS: coqc, $n theorems for every A and B, each closed under the global context (no axioms)"
+fi
